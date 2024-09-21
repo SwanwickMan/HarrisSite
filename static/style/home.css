@@ -27,6 +27,7 @@
 
 
 .popular-posts {
+    margin: auto;
     display: flex;
     justify-content: space-around;
     border: 1px solid black;
@@ -36,7 +37,7 @@
 
 .posts {
     margin: 20px;
-    width: 40%;
+    width: 70%;
 }
 
 .post {

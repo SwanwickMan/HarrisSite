@@ -7,7 +7,8 @@ from HarrisMclennan.models import Comment
 
 # Create your views here.
 def index(request):
-    context_dict = {}
+    search_results = Comment.objects.order_by('-time_posted')[:5]
+    context_dict = {"recent_comments": search_results}
     response = render(request, 'HarrisMclennan/index.html', context=context_dict)
     return response
 

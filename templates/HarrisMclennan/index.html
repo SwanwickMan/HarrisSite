@@ -12,28 +12,41 @@ Home
 {% endblock %}
 
 {% block main_content %}
-<div id="home-page">
-    <div id="about">
-        <img src="{% static  'images/home.jpg' %}" alt="Home Page Photo" id="home-photo">
-        <div id="about-text">
-            <h2>About Us</h2>
-            <p>
-                The GU Filmmaking Society aims to bring together students with various levels of experience who are
-                passionate about filmmaking.
+    <div id="home-page">
+        <div id="about">
+            <img src="{% static  'images/hard.png' %}" alt="Pic that goes hard" id="home-photo">
+            <div id="about-text">
+                <h2>About Us</h2>
+                <p>
+                    The GU Filmmaking Society aims to bring together students with various levels of experience who are
+                    passionate about filmmaking.
 
-                Students will be able to learn practical skills such as production, cinematography, directing,
-                production design, music production and video editing. This will be achieved through both educational
-                workshops and meetings and practical experiences on set producing films and shorter projects.
+                    Students will be able to learn practical skills such as production, cinematography, directing,
+                    production design, music production and video editing. This will be achieved through both educational
+                    workshops and meetings and practical experiences on set producing films and shorter projects.
 
-                Filmmaking will offer students the opportunity to make films, documentaries, music videos and more,
-                supporting and collaborating with film-writers, musicians, small businesses, and charities in Glasgow.
+                    Filmmaking will offer students the opportunity to make films, documentaries, music videos and more,
+                    supporting and collaborating with film-writers, musicians, small businesses, and charities in Glasgow.
 
-                The structure of the society offers equal opportunity to apply for positions of responsibility,
-                including roles in the films and projects, the board and head of departments, who are able to teach and
-                support members of the society in their area of expertise. This will help members gain valuable skills
-                and experience both within and outside of the film-making industry.
-            </p>
+                    The structure of the society offers equal opportunity to apply for positions of responsibility,
+                    including roles in the films and projects, the board and head of departments, who are able to teach and
+                    support members of the society in their area of expertise. This will help members gain valuable skills
+                    and experience both within and outside of the film-making industry.
+                </p>
+            </div>
         </div>
     </div>
-</div>
+
+    <div class="popular-posts">
+        <div class="posts">
+            <h2>Most Liked Posts</h2>
+            {% for result in recent_comments %}
+            <div class="post" onclick="window.location.href = ''">
+                <h3>Anonymous Commenter @{{ result.time_posted }}</h3>
+                <p>Comment: {{ result.comment_content }}</p>
+            </div>
+        {% endfor %}
+
+        </div>
+    </div>
 {% endblock %}
