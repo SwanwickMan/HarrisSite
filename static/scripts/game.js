@@ -61,7 +61,9 @@ class Game {
 	
 	this.player = new Character(getRandom(loader.assets["player"]),5,0);
 	this.enemy = new Character(getRandom(loader.assets["enemy"]),390,400);
-	
+
+	this.music = new Audio('/static/scripts/assets/misc/music.mp3'); this.music.loop = true;
+	this.fail = new Audio('/static/scripts/assets/misc/fail.mp3'); this.fail.loop = false;
   }
   
   async start() {
@@ -82,6 +84,9 @@ class Game {
   }
   
   async lostGame() {
+	  this.music.pause();
+	  this.fail.play();
+
 	  // draw final page
 	  this.canvas.drawImage(this.loader.assets["lose"][0], 0, 0)
 	  this.canvas.font = "21px Garamond, serif"
@@ -99,6 +104,7 @@ class Game {
   }
   
   async startGameLoop() {
+	  this.music.play();
 	  this.gameLoop = setInterval(() => {
 		  this.gameTick();
 		  if (this.gameOver) {
