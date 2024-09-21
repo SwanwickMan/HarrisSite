@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
+from django.views.decorators.csrf import csrf_protect, csrf_exempt
 
 from HarrisMclennan.forms import CommentForm
 from HarrisMclennan.models import Comment
@@ -13,6 +14,7 @@ def index(request):
     return response
 
 
+@csrf_exempt
 def add_comment(request):
     form = CommentForm()
 
