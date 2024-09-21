@@ -1,0 +1,28 @@
+.canvas-container {
+display: flex;
+justify-content: center; /* Centers horizontally */
+align-items: center;     /* Centers vertically */         /* Full viewport height */
+}
+
+canvas {
+display: block;
+}
+
+#gaming{
+  background-image: url("../scripts/assets/misc/bt-7247.png");
+  margin: 0 auto; 
+  
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  width:60%;
+  min-width: 200px;
+  aspect-ratio: 1 / 1;
+  margin-bottom:20px;
+  position: relative;
+  
+  border:12px solid #ff0000;
+}
+
+#game-screen{
+	background-image: url("../scripts/assets/misc/bohr.jpg");
+}

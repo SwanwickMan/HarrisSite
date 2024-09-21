@@ -1,0 +1,37 @@
+{% load static %}
+{% load HarrisMclennan_template_tags %}
+
+<html>
+	<head>
+		<link rel="stylesheet" href="{% static 'style/game.css'%}">
+		<script type="text/javascript" src="{% static 'scripts/AssetLoader.js'%}"></script>
+		<script type="text/javascript" src="{% static 'scripts/joy.js'%}"></script>
+		<script type="text/javascript" src="{% static 'scripts/game.js'%}"></script>
+	</head>
+	
+	<body>
+		<div id="game-screen">
+			<div class="canvas-container">
+				<canvas id="myCanvas" width="512" height="512" style="border:1px solid #000000;">
+				</canvas>
+			</div>
+			
+			<div id="gaming"> </div>
+		</div>
+		
+
+		<script>
+			var canvas = document.getElementById("myCanvas");
+			fixCanvas(canvas,window)
+			
+			const loader = new AssetLoader();
+			loader.onComplete((assets) => {
+				var game = new Game(canvas,loader);
+				game.start();
+			});
+			
+			loader.loadAssets(gameAssets);
+		</script>
+	</body>
+
+</html>

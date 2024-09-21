@@ -31,3 +31,8 @@ def comments_display(request):
     search_results = Comment.objects.all()
     context_dict = {"search_results": search_results}
     return render(request, 'HarrisMclennan/comments_display.html', context=context_dict)
+
+
+def harris_run(request):
+    context_dict = {}
+    return render(request, 'HarrisMclennan/harris_run.html', context=context_dict)
