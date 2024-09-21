@@ -19,15 +19,12 @@ Home
     </div>
 
     <div class="popular-posts">
-        <div class="posts">
-            <h2>Recent Comments</h2>
-            {% for result in recent_comments %}
-                <div class="post" onclick="window.location.href = ''">
-                    <h3>Anonymous Commenter @{{ result.time_posted }}</h3>
-                    <p>Comment: {{ result.comment_content }}</p>
-                </div>
-            {% endfor %}
-
-        </div>
+        <h2>Recent Comments</h2>
+        {% for result in recent_comments %}
+            <div class="post" onclick="this.requestFullscreen()">
+                <h3>Anonymous Commenter @{{ result.time_posted }}</h3>
+                <div>Comment: {{ result.comment_content|safe }}</div>
+            </div>
+        {% endfor %}
     </div>
 {% endblock %}

@@ -28,21 +28,17 @@
 
 
 .popular-posts {
-    margin: auto;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
     border: 1px solid black;
     width: 90%;
     height: auto;
 }
 
-.posts {
-    margin: 20px;
-    width: 70%;
-}
-
 .post {
-    width: 100%;
+    width: 70%;
     border: 1px solid black;
     margin: 5px;
     padding: 5px;
@@ -51,6 +47,7 @@
 
 .post:hover {
     border: 3px solid black;
+    transform: scale(1.1);
 }
 
 .post img {
