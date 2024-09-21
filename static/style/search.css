@@ -1,0 +1,99 @@
+#search-bar{
+  padding: 12px;
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Distribute items evenly along the main axis */
+  align-items: center; /* Align items vertically in the center */
+  width: 100%;
+}
+
+#search-bar button {
+  padding: 12px;
+  width: 10%
+}
+
+#search-bar input{
+  padding: 12px;
+  width: 50%;
+}
+
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 12px;
+  width: 10%;
+  border: none;
+  text-align: left;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+#content {
+  display: flex; /* Use flexbox */
+  justify-content: space-evenly; /* Distribute items evenly along the main axis */
+  align-items: center; /* Align items vertically in the center */
+  width: 80%;
+  padding: 0 18px;
+  background-color: #CBC3E3;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.radio-options {
+  padding-right: 20px;
+}
+
+
+.popular-posts{
+    border: 1px solid black;
+    width: 90%
+}
+
+.post {
+    width: 40%;
+    border: 1px solid black;
+}
+
+.post img {
+    height: 30px;
+    width: auto;
+}
+
+/*search results*/
+
+.search-results-section{
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    width: 75%;
+    margin-bottom: 15px;
+}
+
+.search-results-section h2{
+    text-align: center;
+}
+
+.result {
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 60%;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.result:hover{
+    border: 3px solid black;
+}
+
+.result img {
+    height: 30px;
+    width: auto;
+}
