@@ -16,7 +16,7 @@ Add a Comment
 <h1>Add a Comment</h1>
 
 <div>
-    <form id="form" method="post" enctype="multipart/form-data" action="{% url 'HarrisMclennan:add_comment' %}">
+    <form id="form" method="post" action="{% url 'HarrisMclennan:add_comment' %}">
         {% csrf_token %}
         {% for hidden in form.hidden_fields %}
         {{ hidden }}
