@@ -288,7 +288,7 @@ function fixCanvas(canvas,window){
 	
 	if (screenAspectRatio > canvasAspectRatio) {
 		// Screen is wider than the canvas aspect ratio, scale by height
-		canvas.style.height = `${screenHeight}px`;
+		canvas.style.height = `${screenHeight*0.9}px`;
 		canvas.style.width = `${screenHeight * canvasAspectRatio}px`;
 	} else {
 		// Screen is taller or equal in aspect ratio, scale by width

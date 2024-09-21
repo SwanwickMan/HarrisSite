@@ -1,14 +1,19 @@
+{% extends "HarrisMclennan/base.html" %}
 {% load static %}
 {% load HarrisMclennan_template_tags %}
 
-<html>
-	<head>
-		<link rel="stylesheet" href="{% static 'style/game.css'%}">
-		<script type="text/javascript" src="{% static 'scripts/AssetLoader.js'%}"></script>
-		<script type="text/javascript" src="{% static 'scripts/joy.js'%}"></script>
-		<script type="text/javascript" src="{% static 'scripts/game.js'%}"></script>
-	</head>
-	
+{% block title %}
+Harris Run
+{% endblock %}
+
+{% block extra_style_sheet %}
+    <link rel="stylesheet" href="{% static 'style/game.css'%}">
+    <script type="text/javascript" src="{% static 'scripts/AssetLoader.js'%}"></script>
+    <script type="text/javascript" src="{% static 'scripts/joy.js'%}"></script>
+    <script type="text/javascript" src="{% static 'scripts/game.js'%}"></script>
+{% endblock %}
+
+{% block main_content %}	
 	<body>
 		<div id="game-screen">
 			<div class="canvas-container">
@@ -34,4 +39,4 @@
 		</script>
 	</body>
 
-</html>
+{% endblock %}
