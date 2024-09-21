@@ -66,6 +66,7 @@ class Game {
   
   async start() {
 	  // set game up to start
+	  this.noOfTicks = 0;
 	  this.randomiseBackground();
 	  this.setCharacterPositions();
 	  this.canvas.drawImage(this.loader.assets["start"][0], 0, 0)
