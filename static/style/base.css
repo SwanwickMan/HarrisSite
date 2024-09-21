@@ -1,8 +1,6 @@
 html,
 
 header {
-
-    padding: 10px;
 }
 
 body {
@@ -99,4 +97,8 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
+}
+
+#logo {
+    padding-left: 5px;
 }

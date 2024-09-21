@@ -4,20 +4,21 @@
 body {
     background-color: #f2f2f2;
     /* Light grey background */
-    color: #333;
+    color:#B6361F;
     /* Dark grey text color */
 }
 
 /* Header styles */
 header {
-    background-color: #483d8b;
+    background-color: #14591D;
     /* Dark purple background */
     color: #fff;
     /* White text color */
+    border: 3px solid #0A210F;
 }
 
 body{
-    background-color: #CBC3E3;
+    background-color: 	#70C1B3;
 }
 
 /* Navigation links */
@@ -28,14 +29,19 @@ body{
 
 /* Footer styles */
 footer {
-    background-color: #64526B;
+    background-color: 	#0A210F;
     /* Dark background color for footer */
     color: #fff;
     /* White text color */
+    border: 3px solid #14591D;
 }
 
 /* Support links */
 #support-us a {
     color: #fff;
     /* White text color for support links */
+}
+
+h3{
+    color: #873122;
 }
