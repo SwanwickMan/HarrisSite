@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
-{% load GUFilmmaking_template_tags %}
+{% load HarrisMclennan_template_tags %}
 
 <html lang="en">
 
@@ -11,42 +11,24 @@
 
     <title>
         {% block title %}
-        GU Filmmaking Society
+        Harris Mclennan
         {% endblock title %}
     </title>
 </head>
 
 <body>
     <header>
-        <div id="top-header-section">
-
-            <form id="searchbar" action="{% url 'GUFilmmakingApp:search' %}" method="get">
-                <input type="text" name="search" placeholder="Search GU Filmmaking...">
-                <button type="submit">Search</button>
-            </form>
-            {% if user.is_authenticated %}
-            <a href="{% url 'GUFilmmakingApp:logout' %}">Logout</a>
-            {% else %}
-            <a href="{%  url 'GUFilmmakingApp:signup' %}">Sign Up</a>
-            <a href="{%  url 'GUFilmmakingApp:login' %}">Log In</a>
-            {% endif %}
-            <a href="{%  url 'GUFilmmakingApp:add_post' %}">Post</a>
-        </div>
-
         <div id="bottom-header-section">
-            <a href="{% url 'GUFilmmakingApp:index' %}">
-                <img src="{% static 'images/logo.jpg' %}" alt="GU Filmmaking Logo" id="logo">
-                <img src="{% static 'images/src.jpg' %}" alt="SCR Logo" id="src-logo">
-                <img src="{% static 'images/uog.jpg' %}" alt="UOG Logo" id="uog-logo">
+            <a href="">
+                <img src="{% static 'images/350z.png' %}" alt="scorch.jpeg" id="logo">
             </a>
             <h1>
-                <a href="{% url 'GUFilmmakingApp:index' %}"> GU Filmmaking Society </a>
+                <a href="{% url 'HarrisMclennan:index' %}"> Harris Mclennan </a>
             </h1>
             <div id="navigation-links">
-                <a href="{% url 'GUFilmmakingApp:search' %}?search_for=longer_movie">Movies</a>
-                <a href="{% url 'GUFilmmakingApp:search' %}?search_for=shorter_movie">Short Movies</a>
-                <a href="{% url 'GUFilmmakingApp:search' %}?search_for=poster">Posters</a>
-                <a href="{% url 'GUFilmmakingApp:search' %}?search_for=bts">Behind the Scenes</a>
+                <a href="{% url 'HarrisMclennan:comments_display' %}">Comments</a>
+                <a href="{% url 'HarrisMclennan:add_comment' %}">Post Comment</a>
+                <a href="">Harris Run Game</a>
             </div>
         </div>
     </header>
@@ -56,9 +38,9 @@
     </div>
 
     <footer>
-        <a href="{% url 'GUFilmmakingApp:index' %}">Home</a>
-        <a href="{% url 'GUFilmmakingApp:search' %}?search_for=Users">Users</a>
-        <a href="{% url 'GUFilmmakingApp:redirect_to_user' user %}">Profile</a>
+        <a href="{% url 'HarrisMclennan:index' %}">Home</a>
+        <a href="">Users</a>
+        <a href="">Profile</a>
         <div id="support-us">
             <span>Support Us:</span>
             <a href="https://www.tiktok.com/@gufilmsociety">TikTok</a>
