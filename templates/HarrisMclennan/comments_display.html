@@ -13,7 +13,7 @@
     <div class="search-results-section">
         <h2>Comments:</h2>
         {% for result in search_results %}
-            <div class="result" onclick="window.location.href = ''">
+            <div class="result" onclick="this.requestFullscreen()">
                 <h3>Anonymous Commenter @{{ result.time_posted }}</h3>
                 <div>Comment: {{ result.comment_content|safe }}</div>
             </div>

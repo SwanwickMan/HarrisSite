@@ -92,7 +92,7 @@ class Game {
 	  this.canvas.font = "21px Garamond, serif"
 	  this.canvas.fillStyle = "yellow";
 	  this.canvas.fillText(fancyTimeFormat(this.getSecondsRun()),275,168); 
-	  await this.sleep(2000)
+	  await this.sleep(1500)
 	  
 	  this.startLoop = setInterval(() => {
 		  var skip = this.getPlayerMove(this.player);
