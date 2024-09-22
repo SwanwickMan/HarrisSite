@@ -1,6 +1,9 @@
 var gameAssets = [
 			{folder: 'backgrounds', src: '/static/scripts/assets/backgrounds/gymgroup.png' },
 			{folder: 'backgrounds', src: '/static/scripts/assets/backgrounds/hamiltoncentral.png' },
+            {folder: 'backgrounds', src: '/static/scripts/assets/backgrounds/kelvingrove.png' },
+            {folder: 'backgrounds', src: '/static/scripts/assets/backgrounds/carmyle.png' },
+            {folder: 'backgrounds', src: '/static/scripts/assets/backgrounds/wfc.png' },
 			
 			{folder: 'player', src: '/static/scripts/assets/sprites/player/drawn.png' },
 			{folder: 'player', src: '/static/scripts/assets/sprites/player/mcSkin.png' },
@@ -14,6 +17,9 @@ var gameAssets = [
 			{folder: 'enemy', src: '/static/scripts/assets/sprites/enemy/moneyLender.png' },
 			{folder: 'enemy', src: '/static/scripts/assets/sprites/enemy/lee.png' },
 			{folder: 'enemy', src: '/static/scripts/assets/sprites/enemy/sausages.png' },
+            {folder: 'enemy', src: '/static/scripts/assets/sprites/enemy/scorch.png' },
+            {folder: 'enemy', src: '/static/scripts/assets/sprites/enemy/bbs.png' },
+            {folder: 'enemy', src: '/static/scripts/assets/sprites/enemy/archer.png' },
 			
 			{folder: 'clock', src: '/static/scripts/assets/misc/clock.png' },
 			
