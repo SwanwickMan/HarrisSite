@@ -4,6 +4,7 @@ var gameAssets = [
             {folder: 'backgrounds', src: '/static/scripts/assets/backgrounds/kelvingrove.png' },
             {folder: 'backgrounds', src: '/static/scripts/assets/backgrounds/carmyle.png' },
             {folder: 'backgrounds', src: '/static/scripts/assets/backgrounds/wfc.png' },
+            {folder: 'backgrounds', src: '/static/scripts/assets/backgrounds/mcmods.png' },
 			
 			{folder: 'player', src: '/static/scripts/assets/sprites/player/drawn.png' },
 			{folder: 'player', src: '/static/scripts/assets/sprites/player/mcSkin.png' },
@@ -20,6 +21,7 @@ var gameAssets = [
             {folder: 'enemy', src: '/static/scripts/assets/sprites/enemy/scorch.png' },
             {folder: 'enemy', src: '/static/scripts/assets/sprites/enemy/bbs.png' },
             {folder: 'enemy', src: '/static/scripts/assets/sprites/enemy/archer.png' },
+            {folder: 'enemy', src: '/static/scripts/assets/sprites/enemy/mike.png' },
 			
 			{folder: 'clock', src: '/static/scripts/assets/misc/clock.png' },
 			
