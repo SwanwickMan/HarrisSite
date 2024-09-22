@@ -93,6 +93,10 @@ class Game {
 	  this.canvas.fillStyle = "yellow";
 	  this.canvas.fillText(fancyTimeFormat(this.getSecondsRun()),275,168); 
 	  await this.sleep(1500)
+
+	  // offer to save to scoreboard
+	  saveToScoreboard(this.getSecondsRun());
+
 	  
 	  this.startLoop = setInterval(() => {
 		  var skip = this.getPlayerMove(this.player);

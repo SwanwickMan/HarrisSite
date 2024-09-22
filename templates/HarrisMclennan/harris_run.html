@@ -11,10 +11,13 @@ Harris Run
     <script type="text/javascript" src="{% static 'scripts/AssetLoader.js'%}"></script>
     <script type="text/javascript" src="{% static 'scripts/joy.js'%}"></script>
     <script type="text/javascript" src="{% static 'scripts/game.js'%}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="{% static 'scripts/AjaxUpdateScoreboard.js'%}"></script>
 {% endblock %}
 
 {% block main_content %}	
 	<body>
+        <button type="button" id="submitBtn">Submit</button>
 		<div id="game-screen">
 			<div class="canvas-container">
 				<canvas id="myCanvas" width="512" height="512" style="border:1px solid #000000;">

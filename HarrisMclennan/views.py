@@ -1,9 +1,10 @@
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views.decorators.csrf import csrf_protect, csrf_exempt
 
-from HarrisMclennan.forms import CommentForm
-from HarrisMclennan.models import Comment
+from HarrisMclennan.forms import CommentForm, ScoreboardForm
+from HarrisMclennan.models import Comment, Scoreboard
 
 
 # Create your views here.
@@ -11,6 +12,13 @@ def index(request):
     search_results = Comment.objects.order_by('-time_posted')[:5]
     context_dict = {"recent_comments": search_results}
     response = render(request, 'HarrisMclennan/index.html', context=context_dict)
+    return response
+
+
+def scoreboard(request):
+    search_results = Scoreboard.objects.order_by('-score_time')
+    context_dict = {"scoreboard_entries": search_results}
+    response = render(request, 'HarrisMclennan/scoreboard.html', context=context_dict)
     return response
 
 
@@ -43,3 +51,14 @@ def harris_run(request):
 def harris_jerk(request):
     context_dict = {}
     return render(request, 'HarrisMclennan/harris_jerk.html', context=context_dict)
+
+
+def save_to_scoreboard(request):
+    if request.method == 'POST':
+        form = ScoreboardForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return JsonResponse({'status': 'success', 'message': 'Data saved successfully'})
+        else:
+            return JsonResponse({'status': 'error', 'message': form.errors})
+    return JsonResponse({'status': 'error', 'message': 'Invalid request method'})

@@ -15,7 +15,7 @@
         {% for result in search_results %}
             <div class="result" onclick="this.requestFullscreen()">
                 <h3>Anonymous Commenter @{{ result.time_posted }} says:</h3>
-                <div> <pre>{{ result.comment_content|safe }}</pre>> </div>
+                <div> <pre>{{ result.comment_content|safe }}</pre> </div>
             </div>
         {% endfor %}
     </div>

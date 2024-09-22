@@ -1,0 +1,40 @@
+{% extends "HarrisMclennan/base.html" %}
+{% load static %}
+{% load HarrisMclennan_template_tags %}
+
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block extra_style_sheet %}
+<link rel="stylesheet" href="{% static 'style/home.css' %}">
+    <link rel="stylesheet" href="{% static 'style/scoreboard.css' %}">
+{% endblock %}
+
+{% block main_content %}
+    <div id="home-page">
+        <h1>HARRIS RUN GLOBAL SCOREBOARD</h1>
+    </div>
+
+    <table border="1" id="scoreboardTable">
+        <thead>
+            <tr>
+                <th>Place</th>
+                <th>Player Name</th>
+                <th>Score Time</th>
+                <th>Entry Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in scoreboard_entries %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ entry.player_name }}</td>
+                    <td>{{ entry.score_time }}</td>
+                    <td>{{ entry.created_at }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
