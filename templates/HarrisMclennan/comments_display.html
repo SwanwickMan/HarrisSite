@@ -14,8 +14,8 @@
         <h2>Comments:</h2>
         {% for result in search_results %}
             <div class="result" onclick="this.requestFullscreen()">
-                <h3>Anonymous Commenter @{{ result.time_posted }}</h3>
-                <div> Comment: <pre>{{ result.comment_content|safe }}</pre>> </div>
+                <h3>Anonymous Commenter @{{ result.time_posted }} says:</h3>
+                <div> <pre>{{ result.comment_content|safe }}</pre>> </div>
             </div>
         {% endfor %}
     </div>
