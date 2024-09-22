@@ -38,3 +38,8 @@ def comments_display(request):
 def harris_run(request):
     context_dict = {}
     return render(request, 'HarrisMclennan/harris_run.html', context=context_dict)
+
+
+def harris_jerk(request):
+    context_dict = {}
+    return render(request, 'HarrisMclennan/harris_jerk.html', context=context_dict)

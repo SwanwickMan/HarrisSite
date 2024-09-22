@@ -13,5 +13,6 @@ urlpatterns = [
     path('add_comment/', views.add_comment, name='add_comment'),
     path('comments/', views.comments_display, name='comments_display'),
     path('harrisrun/', views.harris_run, name='harris_run'),
+    path('harrisjerk/', views.harris_jerk, name='harris_jerk'),
 ]
 
