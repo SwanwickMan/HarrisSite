@@ -1,4 +1,6 @@
-from django.http import JsonResponse
+import os
+
+from django.http import JsonResponse, FileResponse, HttpResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views.decorators.csrf import csrf_protect, csrf_exempt
@@ -62,3 +64,8 @@ def save_to_scoreboard(request):
         else:
             return JsonResponse({'status': 'error', 'message': form.errors})
     return JsonResponse({'status': 'error', 'message': 'Invalid request method'})
+
+
+def send_robot_txt(request):
+    response = "User-agent: *\nAllow: /"
+    return HttpResponse(response, content_type='text/plain')
